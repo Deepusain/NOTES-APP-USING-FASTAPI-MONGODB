@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Notes</h2>
+<ul>
+    {% for note in notes %}
+        <li>
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.content }}</p>
+            <a href="/update/{{ note['_id'] }}">Edit</a>
+            <a href="/delete/{{ note['_id'] }}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
