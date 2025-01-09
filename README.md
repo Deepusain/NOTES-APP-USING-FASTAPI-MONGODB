@@ -41,19 +41,24 @@ Delete Note: Click on the "Delete" button to remove a note.
 # Project Structure
 .
 ├── app
-│   ├── __init__.py
-│   ├── main.py                # Entry point for FastAPI application
-│   ├── models.py              # Pydantic models for data validation
-│   ├── routes.py              # Routes for handling requests
+│   ├── static                 # Css style
+│       └── style.css
 │   └── templates              # Jinja2 HTML templates
 │       ├── base.html
+│       ├── create.html
 │       ├── index.html
 │       └── note_form.html
 ├── .env                       # Environment variables
+├── routes
+│       └── notes.py           # Routes for handling requests
+├── database.py                # Database collection
+├── main.py                    # Entry point for FastAPI application
+├── models.py                  # Pydantic models for data validation
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation
 
 # Requirements
 Python 3.x
+>
 MongoDB
 
